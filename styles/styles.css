@@ -1,0 +1,29 @@
+html {
+	background-color: #005397;
+}
+
+body {
+	width: 600px;
+	margin: 0 auto;
+	background-color:  #FF9550;
+}
+
+.baseClass:hover {
+color: green;
+}
+
+#baseId {
+color: red;
+font-family: 'Open Sans', sans-serif;
+font-size: 45px;
+}
+
+p:hover {
+
+}
+
+.raghuveerClass{
+background-color: purple;
+border : 5px solid white;
+padding: 10px 10px;
+}
