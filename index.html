@@ -8,6 +8,22 @@
 	 <link rel="canonical" href="http://www.example.com" />
     <script src="https://apis.google.com/js/platform.js" async defer>
     </script>
+    <script type="text/javascript">
+
+
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+     document.getElementById("baseId").innerHTML = xhttp.responseText;
+    }
+  }
+  xhttp.open("GET", "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCOCekSOLf6Zgf-UIwNsPBhg", true);
+  xhttp.send();
+  console.log(xhttp.responseText);
+}
+</script>
 
 </head>
 
@@ -21,9 +37,11 @@
 	<DIV>
 		<h1>NAVEEN'S first website</h1>
 	</DIV>
+
 <img src="images/testNYT.jpg">
-<!--     <g:hangout render="createhangout"></g:hangout>
- -->  
+
+<button  onclick="loadDoc()">Get from youtube</button>
+
  <div class = "baseClass">
  	<div>
  		    <g:hangout render="createhangout"></g:hangout>
